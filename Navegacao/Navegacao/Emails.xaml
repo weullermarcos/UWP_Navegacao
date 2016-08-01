@@ -1,0 +1,54 @@
+﻿<Page
+    x:Class="Navegacao.Emails"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Navegacao"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--Emails-->
+        <TextBlock Grid.Row="0"
+                   Text="Emails"
+                   Margin="12"
+                   FontSize="36"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Center"/>
+
+        <!--StackPanel-->
+        <StackPanel Grid.Row="1"
+                    Margin="12">
+
+            <!--txtOrigem-->
+            <TextBlock x:Name="txtOrigem"
+                       Margin="0,0,0,12"/>
+
+            <!--Botão Ir para Todos-->
+            <Button Margin="0,0,0,12"
+                    HorizontalAlignment="Stretch"
+                    Content="Ir para Todos"
+                    Click="Button_Click"/>
+
+            <!--Botão Ir para Favoritos-->
+            <Button Margin="0,0,0,12"
+                    HorizontalAlignment="Stretch"
+                    Content="Ir para Favoritos"
+                    Click="Button_Click_1"/>
+
+            <!--Botão Ir para Telefones-->
+            <Button Margin="0,0,0,12"
+                    HorizontalAlignment="Stretch"
+                    Content="Ir para Telefones"
+                    Click="Button_Click_2"/>
+
+        </StackPanel>
+
+    </Grid>
+</Page>

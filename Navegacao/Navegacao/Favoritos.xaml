@@ -1,0 +1,88 @@
+﻿<Page
+    x:Class="Navegacao.Favoritos"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Navegacao"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--Favoritos-->
+        <TextBlock Grid.Row="0"
+                   Text="Favoritos"
+                   Margin="12"
+                   FontSize="36"/>
+
+        <ListView Grid.Row="1"
+                  x:Name="myListView">
+
+            <!--estilo para itens da lista-->
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem" >
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                    <Setter Property="VerticalContentAlignment" Value="Stretch"/>
+                    <Setter Property="Margin" Value="0"/>
+                    <Setter Property="Padding" Value="0"/>
+                </Style>
+            </ListView.ItemContainerStyle>
+            
+            <ListView.ItemTemplate>
+                <DataTemplate>
+
+                    <Grid Margin="0,12"
+                          BorderThickness="0,0,0,1"
+                          BorderBrush="LightGray"
+                          HorizontalAlignment="Stretch"
+                          VerticalAlignment="Stretch">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="2*" />
+                            <RowDefinition Height="2*" />
+                            <RowDefinition Height="2*" />
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <!--Texto Nome-->
+                        <TextBlock Grid.Row="0" Grid.Column="0" 
+                                   Text="Nome: "/>
+
+                        <!--Valor Nome-->
+                        <TextBlock Grid.Row="0" Grid.Column="1" 
+                                   Text="{Binding Nome}"/>
+
+                        <!--Texto Email-->
+                        <TextBlock Grid.Row="1" Grid.Column="0" 
+                                   Text="Email: "/>
+
+                        <!--Valor Email-->
+                        <TextBlock Grid.Row="1" Grid.Column="1" 
+                                   Text="{Binding Email}"/>
+
+                        <!--Texto Telefone-->
+                        <TextBlock Grid.Row="2" Grid.Column="0" 
+                                   Text="Telefone: "/>
+
+                        <!--Valor Telefone-->
+                        <TextBlock Grid.Row="2" Grid.Column="1" 
+                                   Text="{Binding Telefone}"/>
+
+                    </Grid>
+                    
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            
+        </ListView>
+
+    </Grid>
+</Page>
