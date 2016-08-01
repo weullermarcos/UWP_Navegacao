@@ -136,7 +136,7 @@ direito no arquivo, selecione properties. Seguindo esses passos você visualizar
   - Ao clicar na opção Todos do menu, navegar para a tela Todos,  --------------------------------------------------------- OK
   - passando a lista de contatos como parâmetros; ------------------------------------------------------------------------- OK
 
-- O alinhamento horizontal de todos os items do controle ListView devem ocupar toda largura 
+- O alinhamento horizontal de todos os items do controle ListView devem ocupar toda largura  ------------------------------ OK
   disponível (como dica, utilizar a propriedade ItemConteinerStyle);
 
 - No DataTemplate do ItemTemplate, faça:
