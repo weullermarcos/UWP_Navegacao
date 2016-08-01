@@ -1,0 +1,177 @@
+********************
+PARTE 01
+********************
+
+
+Utilizando o projeto anexado no exercício, implemente as seguintes características:
+
+
+- Criar 4 páginas: Favoritos.xaml, Todos.xaml, Emails.xaml e Telefones.xaml; -------------------------------------------- OK
+
+- Na classe App.xaml.cs, configure o Frame principal: ------------------------------------------------------------------- OK
+Adicione a propriedade estática com o nome de “RootFrame”; -------------------------------------------------------------- OK
+No método OnLanched, instanciar a propriedade “RootFrame”; -------------------------------------------------------------- OK
+O “Content” da janela principal deve ser uma instâcia da classe HamburgerMenu; ------------------------------------------ OK
+A navegação inicial deve ser para a página Favoritos; ------------------------------------------------------------------- OK
+Implementar o evento do botão voltar. ----------------------------------------------------------------------------------- OK
+
+
+- Na classe HamburgerMenu.xaml, implemente: ----------------------------------------------------------------------------- OK
+Implemente o evento de clique do botão com o nome “btnMenu” onde o mesmo deve esconder 
+o menu, caso o menu esteja visível, ou apresentar o menu, caso o menu esteja escondido. --------------------------------- OK
+
+
+- Na classe HamburgerMenu.xaml.cs, implemente: -------------------------------------------------------------------------- OK
+Substituir o Frame da página, criando uma propriedade com o nome de “Frame” e utilizando a palavra reservada “new”. 
+O Frame deve receber o “RootFrame” da classe App.xaml.cs; --------------------------------------------------------------- OK
+Assinar/Criar o evento Navigated do Frame; ------------------------------------------------------------------------------ OK
+No evento Navigated criado no tópico acima, adicionar no “Content” do SplitView o “Frame”; ------------------------------ OK
+Ainda no evento, implementar a visibilidade do botão voltar; ------------------------------------------------------------ ??
+Implementar o evento de clique da opção Favoritos do menu. Ao clicar na opção, o 
+aplicativo deve navegar para a classe Favoritos e passar a palavra “Menu” como parâmetro; ------------------------------- OK
+Implementar o evento de clique da opção Todos do menu. Ao clicar na opção, 
+o aplicativo deve navegar para a classe Todos e passar a palavra “Menu” como parâmetro; --------------------------------- OK
+Implementar o evento de clique da opção Emails do menu. Ao clicar na opção, o aplicativo 
+deve navegar para a classe Emails e passar a palavra “Menu” como parâmetro; --------------------------------------------- OK
+Implementar o evento de clique da opção Telefones do menu. Ao clicar na opção, 
+o aplicativo deve navegar para a classe Telefones e passar a palavra “Menu” como parâmetro. ----------------------------- OK
+
+
+- Na classe Favoritos.xaml, implementar: -------------------------------------------------------------------------------- OK
+Na grid principal, adicionar duas linhas. ------------------------------------------------------------------------------- OK
+A primeira com tamanho automático. A segundo com o tamanho disponível restante; ----------------------------------------- OK
+*Na primeira linha, adicionar um TextBlock com as características: ------------------------------------------------------ OK
+Texto igual a “Favoritos”,  --------------------------------------------------------------------------------------------- OK
+margem igual a 12, ------------------------------------------------------------------------------------------------------ OK
+tamanho da fonte igual a 36, -------------------------------------------------------------------------------------------- OK
+alinhamento horizontal a esquerda --------------------------------------------------------------------------------------- OK
+e vertical centralizado.------------------------------------------------------------------------------------------------- OK
+*Na segunda linha, adicionar um StackPanel com as características: ------------------------------------------------------ OK
+Margem igual a 12 e orientação vertical;
+Adicionar um TextBlock com o nome “txtOrigem”, margem inferior igual a 12; ---------------------------------------------- OK
+Adicionar um Button com margem inferior igual a 12, alinhamento horizontal igual 
+a “Stretch” e conteúdo igual a “Ir para Todos”; ------------------------------------------------------------------------- OK
+Adicionar um Button com margem inferior igual a 12, alinhamento horizontal igual 
+a “Stretch” e conteúdo igual a “Ir para Emails”;------------------------------------------------------------------------- OK
+Adicionar um Button com margem inferior igual a 12, alinhamento horizontal igual 
+a “Stretch” e conteúdo igual a “Ir para Telefones”. --------------------------------------------------------------------- OK
+
+
+- Na classe Favoritos.xaml.cs, implemente:
+Substituir o Frame da página, criando uma propriedade com o nome de “Frame” e utilizando a palavra reservada “new”. ----- OK
+O Frame deve receber o “RootFrame” da classe App.xaml.cs; --------------------------------------------------------------- OK
+Assinar/Criar o evento Navigated do Frame; ------------------------------------------------------------------------------ OK
+No evento Navigated criado no tópico acima, receber o parâmetro enviado pela navegação de origem, 
+concatenar com a palavra “Origem” e adicionar no texto do TextBlock; ---------------------------------------------------- OK
+Implementar o evento de clique do Button “Ir para Todos”. Ao clicar no Button, 
+o aplicativo deve navegar para a classe Todos e passar a palavra “Favoritos” como parâmetro;----------------------------- OK
+Implementar o evento de clique do Button “Ir para Emails”. Ao clicar no Button, 
+o aplicativo deve navegar para a classe Emails e passar a palavra “Favoritos” como parâmetro; --------------------------- OK
+Implementar o evento de clique do Button “Ir para Telefones”. Ao clicar no Button, 
+o aplicativo deve navegar para a classe Telefones e passar a palavra “Favoritos” como parâmetro. ------------------------ OK
+
+
+- Realizar as implementações realizadas nas classes: -------------------------------------------------------------------- OK
+Favoritos.xaml e Favoritos.xaml.cs par as telas:
+Todos.xaml, Todos.xaml.cs,  --------------------------------------------------------------------------------------------- OK
+Emails.xaml, Emails.xaml.cs, -------------------------------------------------------------------------------------------- OK
+Telefones.xaml e Telefones.xaml.cs. ------------------------------------------------------------------------------------- OK
+Considerar o nome dos botões em questão, ou seja, na classe Favoritos.xaml existem os botões “Ir para Todos”, ----------- OK
+“Ir para Emails” e “Ir para Telefones”. Sendo assim, na classe “Todos.xaml” --------------------------------------------- OK
+os botões devem ser “Ir para Favoritos”, “Ir para Emails” e “Ir para Telefones”. ---------------------------------------- OK
+O mesmo se aplica para as classes Todos.xaml, Emails.xaml e Telefones.xaml; --------------------------------------------- OK
+Considerar a navegação correta para cada evento de clique dos botões, ou seja, o clique do botão “Ir para Todos” -------- OK
+deve navegar para a classe Todos.xaml, e assim sucessivamente para os outros botões; ------------------------------------ OK
+Considerar a origem da navegação nos parâmetros, ou seja, se a navegação ocorrer da classe Favoritas.xaml, -------------- OK
+o parâmetro passado na navegação deve ser igual a “Favoritas”, se a navegação ocorrer da classe Todos.xaml, ------------- OK
+o parâmetro passado na navegação deve ser igual a “Todos” e assim sucessivamente. --------------------------------------- OK
+
+
+Ao final, devemos ter algo semelhante ao apresentado nas imagens abaixo.
+
+
+
+
+
+********************
+PARTE 02
+********************
+
+Continuando com o exercício:
+
+- Criar a classe Contato seguindo as mesmas características da classe Contato implementada na tabela 1; ------------------- OK
+
+- Adicionar o arquivo json de contatos para auxiliar na criação da lista de Contatos: ------------------------------------- OK
+
+- Adicione a biblioteca Newtonsoft.Json no projeto. Para adicionar essa biblioteca, 
+clique com o botão direito no projeto, selecione “Manage NuGet Packages”, pressione “Ctrl + E”, 
+digite “Newtonsoft.Json”. Na listagem de bibliotecas, selecione a biblioteca “Newtonsoft.Json” e pressione “Install”; ----- OK
+
+- Utilizar o arquivo json anexado no exercício para auxiliar a popular nossa lista de dados de contatos; ------------------ OK
+
+- Caso utilize o arquivo json, altere a propriedade “Build Action” do arquivo para Content. Para isso, clique com o botão 
+direito no arquivo, selecione properties. Seguindo esses passos você visualizará a propriedade “Build Action”. ------------ OK
+
+- Adicionar a deserialização do arquivo json de contato no evento OnNavigated do HamburgerMenu.xaml.cs. 
+  Esse procedimento exije que a classe tenha uma referência do Frame principal e assine o evento OnNavigated: ------------- OK
+
+- Na classe Hamburger.xaml.cs, criar uma propriedade que será a nossa referência para o Frame principal. No entanto, 
+  essa implementação já deve ter sido implementada no exercício 4; -------------------------------------------------------- OK
+
+- Assine o evento Navigated do Frame.  ------------------------------------------------------------------------------------ OK
+
+- No evento assinado, marque o método como async e realize a deserialização do arquivo json de contatos. ------------------ OK
+
+- Ao clicar na opção Favoritos do menu, utilizando LINQ, realizar o filtro dos contatos favoritos da lista de contatos 
+  e navegar para a tela Favoritos, passando o resultado do filtro como parâmetros; ---------------------------------------- OK
+
+- Na página Favoritos.xaml, adicionar uma Grid com duas linhas; ----------------------------------------------------------- OK
+
+- Na primeira linha, adicionar um TextoBlock com o texto “Favoritos” e FontSize igual a 36 e margem igual a 12; ----------- OK
+
+- Na segunda linha, adicionar um controle ListView.  ---------------------------------------------------------------------- OK
+- O ItemSource do ListView deve receber a lista de contatos recebida no parâmetro de navegação. --------------------------- OK
+
+- Configure o ListView com as seguintes características: ------------------------------------------------------------------ OK
+  - Ao clicar na opção Todos do menu, navegar para a tela Todos,  --------------------------------------------------------- OK
+  - passando a lista de contatos como parâmetros; ------------------------------------------------------------------------- OK
+
+- O alinhamento horizontal de todos os items do controle ListView devem ocupar toda largura 
+  disponível (como dica, utilizar a propriedade ItemConteinerStyle);
+
+- No DataTemplate do ItemTemplate, faça:
+  Adicionar uma Grid com três linhas e duas colunas. ---------------------------------------------------------------------- OK
+  A primeira coluna deve ocupar 1/3 do espaço e a segunda coluna deve ocupar 2/3; ----------------------------------------- OK
+  Ainda na Grid do DataTemplate, as margens da esquerda e direita devem ser igual a 0, e superior e inferior igual a 12; -- OK
+  Ainda na Grid do DataTemplate, adicionar borda somente na parte inferior e a cor da borda deve ser cinza claro; --------- OK
+  Na primeira linha e primeira coluna, adicionar um TextBlock com o texto "Nome"; ----------------------------------------- OK
+  Na primeira linha e segunda coluna, adicionar um TextBlock com o binding do nome do contato; ---------------------------- OK
+  Na segunda linha e primeira coluna, adicionar um TextBlock com o texto "Email"; ----------------------------------------- OK
+  Na segunda linha e segunda coluna, adicionar um TextBlock com o binding do e-mail do contato; --------------------------- OK
+  Na terceira linha e primeira coluna, adicionar um TextBlock com o texto "Telefone"; ------------------------------------- OK
+  Na terceira linha e segunda coluna, adicionar um TextBlock com o binding do número do telefone do contato.--------------- OK
+  
+  
+Na página Favoritos.xaml, adicionar uma Grid com duas linhas;
+Na primeira linha, adicionar um TextoBlock com o texto “Todos” e FontSize igual a 36 e margem igual a 12;
+Na segunda linha, adicionar um controle ListView. Esse controle ListView deve ser semelhante ao ListView da página Favoritos;
+Ao clicar na opção Emails do menu, navegar para a tela Emails, utilizando LINQ, realizar o filtro dos contatos com e-mails da lista de contatos e navegar para a tela Emails, passando o resultado do filtro como parâmetros;
+Na página Emails.xaml, adicionar uma Grid com duas linhas;
+Na primeira linha, adicionar um TextoBlock com o texto “Emails” e FontSize igual a 36 e margem igual a 12;
+Na segunda linha, adicionar um controle ListView. Esse controle ListView deve ser semelhante ao ListView da página Favoritos;
+Ao clicar na opção Telefones do menu, navegar para a tela Telefones, utilizando LINQ, realizar o filtro dos contatos com telefone da lista de contatos e navegar para a tela Telefones, passando o resultado do filtro como parâmetros;
+Na página Telefones.xaml, adicionar uma Grid com duas linhas;
+Na primeira linha, adicionar um TextoBlock com o texto “Telefones” e FontSize igual a 36 e margem igual a 12;
+Na segunda linha, adicionar um controle ListView. Esse controle ListView deve ser semelhante ao ListView da página Favoritos;
+Adaptar o layout de acordo com a família de dispositivo. Utilize a técnica do VisualStateManager para realizar essa adaptação:Implementar o clique do botão boltar;
+Quando a largura da tela for de smartphone, ocultar o Pane do SplitView localizado no HamburgerMenu.xaml. O Pane, quando aberto, deve sobrepor o Content (“DisplayMode” igual a “Overlay”). O tamanho do Pane em modo compacto deve ser igual a 0;
+Quando a largura da tela for de tablet ou superior, apresentar o Panel. O Pane, quando aberto, deve ser posicionado o lado-a-lado do Content (“DisplayMode” igual a “CompactInline”). O tamanho do Pane em modo compacto deve ser igual a 50.
+Valendo 1.0 ponto adicional na média, implemente os estilos em um dicionário xaml:
+Defina um estilo para os TextBlocks utilizados na primeira linha da Grid das páginas Favoritos, Todos, Emails e Telefones;
+Defina um estilo para o DataTemplete utilizados no ItemTemplate da ListView das páginas Favoritos, Todos, Emails e Telefones;
+Ao final, devemos ter algo semelhante ao apresentado nas imagens abaixo.
+
+
+
+
+
