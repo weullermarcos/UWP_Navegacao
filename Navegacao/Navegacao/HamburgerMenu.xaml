@@ -8,6 +8,20 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="myVisualState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="720"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="MySplitView.DisplayMode" Value="CompactInline"/>
+                        <Setter Target="MySplitView.CompactPaneLength" Value="50"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
         
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -46,9 +60,9 @@
         <!--Menu Hamburger-->
         <SplitView Grid.Row="1" 
                    x:Name="MySplitView"
-                   DisplayMode="CompactInline"
-                   IsPaneOpen="True" 
-                   CompactPaneLength="50"
+                   DisplayMode="Overlay"
+                   IsPaneOpen="False" 
+                   CompactPaneLength="0"
                    OpenPaneLength="150">
             
             <SplitView.Pane>
@@ -127,6 +141,7 @@
                 </ListView>
             </SplitView.Pane>
         </SplitView>
-    </Grid>
+    
+        </Grid>
 
 </Page>

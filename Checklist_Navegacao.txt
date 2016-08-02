@@ -6,39 +6,39 @@ PARTE 01
 Utilizando o projeto anexado no exercício, implemente as seguintes características:
 
 
-- Criar 4 páginas: Favoritos.xaml, Todos.xaml, Emails.xaml e Telefones.xaml; -------------------------------------------- OK
+- Criar 4 páginas: Favoritos.xaml, Todos.xaml, Emails.xaml e Telefones.xaml; ---------------------------------------------- OK
 
-- Na classe App.xaml.cs, configure o Frame principal: ------------------------------------------------------------------- OK
-Adicione a propriedade estática com o nome de “RootFrame”; -------------------------------------------------------------- OK
-No método OnLanched, instanciar a propriedade “RootFrame”; -------------------------------------------------------------- OK
-O “Content” da janela principal deve ser uma instâcia da classe HamburgerMenu; ------------------------------------------ OK
-A navegação inicial deve ser para a página Favoritos; ------------------------------------------------------------------- OK
-Implementar o evento do botão voltar. ----------------------------------------------------------------------------------- OK
+- Na classe App.xaml.cs, configure o Frame principal: --------------------------------------------------------------------- OK
+Adicione a propriedade estática com o nome de “RootFrame”; ---------------------------------------------------------------- OK
+No método OnLanched, instanciar a propriedade “RootFrame”; ---------------------------------------------------------------- OK
+O “Content” da janela principal deve ser uma instâcia da classe HamburgerMenu; -------------------------------------------- OK
+A navegação inicial deve ser para a página Favoritos; --------------------------------------------------------------------- OK
+Implementar o evento do botão voltar. ------------------------------------------------------------------------------------- OK
 
 
-- Na classe HamburgerMenu.xaml, implemente: ----------------------------------------------------------------------------- OK
+- Na classe HamburgerMenu.xaml, implemente: ------------------------------------------------------------------------------- OK
 Implemente o evento de clique do botão com o nome “btnMenu” onde o mesmo deve esconder 
-o menu, caso o menu esteja visível, ou apresentar o menu, caso o menu esteja escondido. --------------------------------- OK
+o menu, caso o menu esteja visível, ou apresentar o menu, caso o menu esteja escondido. ----------------------------------- OK
 
 
-- Na classe HamburgerMenu.xaml.cs, implemente: -------------------------------------------------------------------------- OK
+- Na classe HamburgerMenu.xaml.cs, implemente: ---------------------------------------------------------------------------- OK
 Substituir o Frame da página, criando uma propriedade com o nome de “Frame” e utilizando a palavra reservada “new”. 
-O Frame deve receber o “RootFrame” da classe App.xaml.cs; --------------------------------------------------------------- OK
-Assinar/Criar o evento Navigated do Frame; ------------------------------------------------------------------------------ OK
-No evento Navigated criado no tópico acima, adicionar no “Content” do SplitView o “Frame”; ------------------------------ OK
-Ainda no evento, implementar a visibilidade do botão voltar; ------------------------------------------------------------ ??
+O Frame deve receber o “RootFrame” da classe App.xaml.cs; ----------------------------------------------------------------- OK
+Assinar/Criar o evento Navigated do Frame; -------------------------------------------------------------------------------- OK
+No evento Navigated criado no tópico acima, adicionar no “Content” do SplitView o “Frame”; -------------------------------- OK
+Ainda no evento, implementar a visibilidade do botão voltar; -------------------------------------------------------------- OK
 Implementar o evento de clique da opção Favoritos do menu. Ao clicar na opção, o 
-aplicativo deve navegar para a classe Favoritos e passar a palavra “Menu” como parâmetro; ------------------------------- OK
+aplicativo deve navegar para a classe Favoritos e passar a palavra “Menu” como parâmetro; --------------------------------- OK
 Implementar o evento de clique da opção Todos do menu. Ao clicar na opção, 
-o aplicativo deve navegar para a classe Todos e passar a palavra “Menu” como parâmetro; --------------------------------- OK
+o aplicativo deve navegar para a classe Todos e passar a palavra “Menu” como parâmetro; ----------------------------------- OK
 Implementar o evento de clique da opção Emails do menu. Ao clicar na opção, o aplicativo 
-deve navegar para a classe Emails e passar a palavra “Menu” como parâmetro; --------------------------------------------- OK
+deve navegar para a classe Emails e passar a palavra “Menu” como parâmetro; ----------------------------------------------- OK
 Implementar o evento de clique da opção Telefones do menu. Ao clicar na opção, 
-o aplicativo deve navegar para a classe Telefones e passar a palavra “Menu” como parâmetro. ----------------------------- OK
+o aplicativo deve navegar para a classe Telefones e passar a palavra “Menu” como parâmetro. ------------------------------- OK
 
 
-- Na classe Favoritos.xaml, implementar: -------------------------------------------------------------------------------- OK
-Na grid principal, adicionar duas linhas. ------------------------------------------------------------------------------- OK
+- Na classe Favoritos.xaml, implementar: ---------------------------------------------------------------------------------- OK
+Na grid principal, adicionar duas linhas. --------------------------------------------------------------------------------- OK
 A primeira com tamanho automático. A segundo com o tamanho disponível restante; ----------------------------------------- OK
 *Na primeira linha, adicionar um TextBlock com as características: ------------------------------------------------------ OK
 Texto igual a “Favoritos”,  --------------------------------------------------------------------------------------------- OK
@@ -87,10 +87,7 @@ o parâmetro passado na navegação deve ser igual a “Favoritas”, se a naveg
 o parâmetro passado na navegação deve ser igual a “Todos” e assim sucessivamente. --------------------------------------- OK
 
 
-Ao final, devemos ter algo semelhante ao apresentado nas imagens abaixo.
-
-
-
+Ao final, devemos ter algo semelhante ao apresentado nas imagens abaixo. ------------------------------------------------ OK
 
 
 ********************
@@ -174,17 +171,32 @@ Continuando com o exercício:
 - Na segunda linha, adicionar um controle ListView. 
   Esse controle ListView deve ser semelhante ao ListView da página Favoritos; -------------------------------------------- OK
 
+- Adaptar o layout de acordo com a família de dispositivo. 
+  Utilize a técnica do VisualStateManager para realizar essa adaptação:
+  Implementar o clique do botão voltar; ---------------------------------------------------------------------------------- OK
 
+- Quando a largura da tela for de smartphone, ocultar o Pane do SplitView localizado no HamburgerMenu.xaml. 
+  O Pane, quando aberto, deve sobrepor o Content (“DisplayMode” igual a “Overlay”). 
+  O tamanho do Pane em modo compacto deve ser igual a 0; ----------------------------------------------------------------- OK
   
-Adaptar o layout de acordo com a família de dispositivo. Utilize a técnica do VisualStateManager para realizar essa adaptação:Implementar o clique do botão boltar;
-Quando a largura da tela for de smartphone, ocultar o Pane do SplitView localizado no HamburgerMenu.xaml. O Pane, quando aberto, deve sobrepor o Content (“DisplayMode” igual a “Overlay”). O tamanho do Pane em modo compacto deve ser igual a 0;
-Quando a largura da tela for de tablet ou superior, apresentar o Panel. O Pane, quando aberto, deve ser posicionado o lado-a-lado do Content (“DisplayMode” igual a “CompactInline”). O tamanho do Pane em modo compacto deve ser igual a 50.
+- Quando a largura da tela for de tablet ou superior, apresentar o Panel. 
+  O Pane, quando aberto, deve ser posicionado o lado-a-lado do Content (“DisplayMode” igual a “CompactInline”). 
+  O tamanho do Pane em modo compacto deve ser igual a 50. ---------------------------------------------------------------- OK
+
 Valendo 1.0 ponto adicional na média, implemente os estilos em um dicionário xaml:
 Defina um estilo para os TextBlocks utilizados na primeira linha da Grid das páginas Favoritos, Todos, Emails e Telefones;
 Defina um estilo para o DataTemplete utilizados no ItemTemplate da ListView das páginas Favoritos, Todos, Emails e Telefones;
 Ao final, devemos ter algo semelhante ao apresentado nas imagens abaixo.
 
 
+Checkpoint: Neste ponto, execute o projeto e certifique que o mesmo esteja compilando e funcionando corretamente. --------- OK
 
 
+********************
+PARTE 03
+********************
 
+- Continuando o exercício:
+
+- Configurar e gerar o pacote para submissão à loja Windows Store. 
+  Não é necessário publicar, mas na entrega do aplicativo, anexar separadamente o pacote gerado.
