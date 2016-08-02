@@ -23,7 +23,7 @@ namespace Navegacao
     public sealed partial class Telefones : Page
     {
         public new Frame Frame => App.RootFrame;
-        string _receivedParameter = string.Empty;
+        List<Contato> telefones = new List<Contato>();
 
         public Telefones()
         {
@@ -35,9 +35,13 @@ namespace Navegacao
 
         private void Frame_Navigated(object sender, NavigationEventArgs e)
         {
-            _receivedParameter = e.Parameter as string;
+            telefones = e.Parameter as List<Contato>;
 
-            txtOrigem.Text = "Origem " + _receivedParameter;
+            if (telefones == null)
+                return;
+
+            myListView.ItemsSource = telefones;
+
         }
 
 

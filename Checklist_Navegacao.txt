@@ -150,28 +150,32 @@ Continuando com o exercício:
   Na segunda linha e segunda coluna, adicionar um TextBlock com o binding do e-mail do contato; --------------------------- OK
   Na terceira linha e primeira coluna, adicionar um TextBlock com o texto "Telefone"; ------------------------------------- OK
   Na terceira linha e segunda coluna, adicionar um TextBlock com o binding do número do telefone do contato.--------------- OK
-  
-  
+   
 - Na página Todos.xaml, adicionar uma Grid com duas linhas; --------------------------------------------------------------- OK
 - Na primeira linha, adicionar um TextoBlock com o texto “Todos” e FontSize igual a 36 e margem igual a 12; --------------- OK
 - Na segunda linha, adicionar um controle ListView. 
   Esse controle ListView deve ser semelhante ao ListView da página Favoritos; --------------------------------------------- OK
-
   
 - Ao clicar na opção Emails do menu, navegar para a tela Emails, utilizando LINQ, 
   realizar o filtro dos contatos com e-mails da lista de contatos e navegar para a tela Emails, 
   passando o resultado do filtro como parâmetros; ------------------------------------------------------------------------ OK
 
-  
-- Na página Emails.xaml, adicionar uma Grid com duas linhas;
-- Na primeira linha, adicionar um TextoBlock com o texto “Emails” e FontSize igual a 36 e margem igual a 12;
+- Na página Emails.xaml, adicionar uma Grid com duas linhas; ------------------------------------------------------------- OK
+- Na primeira linha, adicionar um TextoBlock com o texto “Emails” e FontSize igual a 36 e margem igual a 12; ------------- OK
 - Na segunda linha, adicionar um controle ListView. 
-  Esse controle ListView deve ser semelhante ao ListView da página Favoritos;
+  Esse controle ListView deve ser semelhante ao ListView da página Favoritos; -------------------------------------------- OK
 
-Ao clicar na opção Telefones do menu, navegar para a tela Telefones, utilizando LINQ, realizar o filtro dos contatos com telefone da lista de contatos e navegar para a tela Telefones, passando o resultado do filtro como parâmetros;
-Na página Telefones.xaml, adicionar uma Grid com duas linhas;
-Na primeira linha, adicionar um TextoBlock com o texto “Telefones” e FontSize igual a 36 e margem igual a 12;
-Na segunda linha, adicionar um controle ListView. Esse controle ListView deve ser semelhante ao ListView da página Favoritos;
+- Ao clicar na opção Telefones do menu, navegar para a tela Telefones, utilizando LINQ, 
+  realizar o filtro dos contatos com telefone da lista de contatos e navegar para a tela Telefones, 
+  passando o resultado do filtro como parâmetros; ------------------------------------------------------------------------ OK
+
+- Na página Telefones.xaml, adicionar uma Grid com duas linhas; ---------------------------------------------------------- OK
+- Na primeira linha, adicionar um TextoBlock com o texto “Telefones” e FontSize igual a 36 e margem igual a 12; ---------- OK
+- Na segunda linha, adicionar um controle ListView. 
+  Esse controle ListView deve ser semelhante ao ListView da página Favoritos; -------------------------------------------- OK
+
+
+  
 Adaptar o layout de acordo com a família de dispositivo. Utilize a técnica do VisualStateManager para realizar essa adaptação:Implementar o clique do botão boltar;
 Quando a largura da tela for de smartphone, ocultar o Pane do SplitView localizado no HamburgerMenu.xaml. O Pane, quando aberto, deve sobrepor o Content (“DisplayMode” igual a “Overlay”). O tamanho do Pane em modo compacto deve ser igual a 0;
 Quando a largura da tela for de tablet ou superior, apresentar o Panel. O Pane, quando aberto, deve ser posicionado o lado-a-lado do Content (“DisplayMode” igual a “CompactInline”). O tamanho do Pane em modo compacto deve ser igual a 50.

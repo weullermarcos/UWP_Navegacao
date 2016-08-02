@@ -18,37 +18,72 @@
         <TextBlock Grid.Row="0"
                    Text="Telefones"
                    Margin="12"
-                   FontSize="36"
-                   HorizontalAlignment="Left"
-                   VerticalAlignment="Center"/>
+                   FontSize="36"/>
 
-        <!--StackPanel-->
-        <StackPanel Grid.Row="1"
-                    Margin="12">
+        <ListView Grid.Row="1"
+                  x:Name="myListView">
 
-            <!--txtOrigem-->
-            <TextBlock x:Name="txtOrigem"
-                       Margin="0,0,0,12"/>
+            <!--estilo para itens da lista-->
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem" >
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                    <Setter Property="VerticalContentAlignment" Value="Stretch"/>
+                    <Setter Property="Margin" Value="0"/>
+                    <Setter Property="Padding" Value="0"/>
+                </Style>
+            </ListView.ItemContainerStyle>
 
-            <!--Botão Ir para Todos-->
-            <Button Margin="0,0,0,12"
-                    HorizontalAlignment="Stretch"
-                    Content="Ir para Todos"
-                    Click="Button_Click"/>
+            <ListView.ItemTemplate>
+                <DataTemplate>
 
-            <!--Botão Ir para Emails-->
-            <Button Margin="0,0,0,12"
-                    HorizontalAlignment="Stretch"
-                    Content="Ir para Emails"
-                    Click="Button_Click_1"/>
+                    <Grid Margin="0,12"
+                          BorderThickness="0,0,0,1"
+                          BorderBrush="LightGray"
+                          HorizontalAlignment="Stretch"
+                          VerticalAlignment="Stretch">
 
-            <!--Botão Ir para Favoritos-->
-            <Button Margin="0,0,0,12"
-                    HorizontalAlignment="Stretch"
-                    Content="Ir para Favoritos"
-                    Click="Button_Click_2"/>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="2*" />
+                            <RowDefinition Height="2*" />
+                            <RowDefinition Height="2*" />
+                        </Grid.RowDefinitions>
 
-        </StackPanel>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <!--Texto Nome-->
+                        <TextBlock Grid.Row="0" Grid.Column="0" 
+                                   Text="Nome: "/>
+
+                        <!--Valor Nome-->
+                        <TextBlock Grid.Row="0" Grid.Column="1" 
+                                   Text="{Binding Nome}"/>
+
+                        <!--Texto Email-->
+                        <TextBlock Grid.Row="1" Grid.Column="0" 
+                                   Text="Email: "/>
+
+                        <!--Valor Email-->
+                        <TextBlock Grid.Row="1" Grid.Column="1" 
+                                   Text="{Binding Email}"/>
+
+                        <!--Texto Telefone-->
+                        <TextBlock Grid.Row="2" Grid.Column="0" 
+                                   Text="Telefone: "/>
+
+                        <!--Valor Telefone-->
+                        <TextBlock Grid.Row="2" Grid.Column="1" 
+                                   Text="{Binding Telefone}"/>
+
+                    </Grid>
+
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
 
     </Grid>
+
 </Page>

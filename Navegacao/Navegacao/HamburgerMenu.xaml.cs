@@ -76,8 +76,6 @@ namespace Navegacao
 
             //Navega e passa contatos favoritos como parâmetro
             Frame.Navigate(typeof(Favoritos), favoritos);
-
-            //Frame.Navigate(typeof(Favoritos), "Menu");
         }
 
         private void Todos_Tapped(object sender, TappedRoutedEventArgs e)
@@ -93,9 +91,12 @@ namespace Navegacao
             Frame.Navigate(typeof(Emails), email);
         }
 
-        private void ListViewItem_Tapped_3(object sender, TappedRoutedEventArgs e)
+        private void Telefones_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            Frame.Navigate(typeof(Telefones), "Menu");
+            //Filtra contatos com telefone
+            List<Contato> telefones = new List<Contato>(meusContatos.Where(x => !string.IsNullOrWhiteSpace(x.Telefone)).OrderBy(x => x.Nome));
+
+            Frame.Navigate(typeof(Telefones), telefones);
         }
     }
 }

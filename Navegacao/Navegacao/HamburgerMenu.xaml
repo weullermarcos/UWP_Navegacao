@@ -112,7 +112,7 @@
 
                     <!--Item de Telefones-->
                     <ListViewItem HorizontalContentAlignment="Stretch"
-                                  Tapped="ListViewItem_Tapped_3">
+                                  Tapped="Telefones_Tapped">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="30"/>
