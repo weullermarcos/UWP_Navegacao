@@ -160,12 +160,14 @@ Continuando com o exercício:
   
 - Ao clicar na opção Emails do menu, navegar para a tela Emails, utilizando LINQ, 
   realizar o filtro dos contatos com e-mails da lista de contatos e navegar para a tela Emails, 
-  passando o resultado do filtro como parâmetros;
+  passando o resultado do filtro como parâmetros; ------------------------------------------------------------------------ OK
 
   
-Na página Emails.xaml, adicionar uma Grid com duas linhas;
-Na primeira linha, adicionar um TextoBlock com o texto “Emails” e FontSize igual a 36 e margem igual a 12;
-Na segunda linha, adicionar um controle ListView. Esse controle ListView deve ser semelhante ao ListView da página Favoritos;
+- Na página Emails.xaml, adicionar uma Grid com duas linhas;
+- Na primeira linha, adicionar um TextoBlock com o texto “Emails” e FontSize igual a 36 e margem igual a 12;
+- Na segunda linha, adicionar um controle ListView. 
+  Esse controle ListView deve ser semelhante ao ListView da página Favoritos;
+
 Ao clicar na opção Telefones do menu, navegar para a tela Telefones, utilizando LINQ, realizar o filtro dos contatos com telefone da lista de contatos e navegar para a tela Telefones, passando o resultado do filtro como parâmetros;
 Na página Telefones.xaml, adicionar uma Grid com duas linhas;
 Na primeira linha, adicionar um TextoBlock com o texto “Telefones” e FontSize igual a 36 e margem igual a 12;

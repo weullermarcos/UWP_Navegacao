@@ -98,7 +98,7 @@
 
                     <!--Item de Emails-->
                     <ListViewItem HorizontalContentAlignment="Stretch"
-                                  Tapped="ListViewItem_Tapped_2">
+                                  Tapped="Email_Tapped">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="30"/>

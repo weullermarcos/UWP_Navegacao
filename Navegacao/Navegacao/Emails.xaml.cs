@@ -25,6 +25,8 @@ namespace Navegacao
         public new Frame Frame => App.RootFrame;
         string _receivedParameter = string.Empty;
 
+        List<Contato> email = new List<Contato>();
+
         public Emails()
         {
             this.InitializeComponent();
@@ -35,9 +37,13 @@ namespace Navegacao
 
         private void Frame_Navigated(object sender, NavigationEventArgs e)
         {
-            _receivedParameter = e.Parameter as string;
+            email = e.Parameter as List<Contato>;
 
-            txtOrigem.Text = "Origem " + _receivedParameter;
+            if (email == null)
+                return;
+
+            myListView.ItemsSource = email;
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

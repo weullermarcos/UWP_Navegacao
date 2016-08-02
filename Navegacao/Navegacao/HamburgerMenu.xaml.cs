@@ -85,9 +85,12 @@ namespace Navegacao
             Frame.Navigate(typeof(Todos), meusContatos);
         }
 
-        private void ListViewItem_Tapped_2(object sender, TappedRoutedEventArgs e)
+        private void Email_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            Frame.Navigate(typeof(Emails), "Menu");
+            //Filtra contatos com e-mail
+            List<Contato> email = new List<Contato>(meusContatos.Where(x => !string.IsNullOrWhiteSpace(x.Email)).OrderBy(x => x.Nome));
+            
+            Frame.Navigate(typeof(Emails), email);
         }
 
         private void ListViewItem_Tapped_3(object sender, TappedRoutedEventArgs e)
