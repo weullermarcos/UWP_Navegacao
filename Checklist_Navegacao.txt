@@ -104,13 +104,13 @@ Continuando com o exercício:
 - Adicionar o arquivo json de contatos para auxiliar na criação da lista de Contatos: ------------------------------------- OK
 
 - Adicione a biblioteca Newtonsoft.Json no projeto. Para adicionar essa biblioteca, 
-clique com o botão direito no projeto, selecione “Manage NuGet Packages”, pressione “Ctrl + E”, 
-digite “Newtonsoft.Json”. Na listagem de bibliotecas, selecione a biblioteca “Newtonsoft.Json” e pressione “Install”; ----- OK
+  clique com o botão direito no projeto, selecione “Manage NuGet Packages”, pressione “Ctrl + E”, 
+  digite “Newtonsoft.Json”. Na listagem de bibliotecas, selecione a biblioteca “Newtonsoft.Json” e pressione “Install”; --- OK
 
 - Utilizar o arquivo json anexado no exercício para auxiliar a popular nossa lista de dados de contatos; ------------------ OK
 
 - Caso utilize o arquivo json, altere a propriedade “Build Action” do arquivo para Content. Para isso, clique com o botão 
-direito no arquivo, selecione properties. Seguindo esses passos você visualizará a propriedade “Build Action”. ------------ OK
+  direito no arquivo, selecione properties. Seguindo esses passos você visualizará a propriedade “Build Action”. ---------- OK
 
 - Adicionar a deserialização do arquivo json de contato no evento OnNavigated do HamburgerMenu.xaml.cs. 
   Esse procedimento exije que a classe tenha uma referência do Frame principal e assine o evento OnNavigated: ------------- OK
@@ -152,10 +152,17 @@ direito no arquivo, selecione properties. Seguindo esses passos você visualizar
   Na terceira linha e segunda coluna, adicionar um TextBlock com o binding do número do telefone do contato.--------------- OK
   
   
-Na página Favoritos.xaml, adicionar uma Grid com duas linhas;
-Na primeira linha, adicionar um TextoBlock com o texto “Todos” e FontSize igual a 36 e margem igual a 12;
-Na segunda linha, adicionar um controle ListView. Esse controle ListView deve ser semelhante ao ListView da página Favoritos;
-Ao clicar na opção Emails do menu, navegar para a tela Emails, utilizando LINQ, realizar o filtro dos contatos com e-mails da lista de contatos e navegar para a tela Emails, passando o resultado do filtro como parâmetros;
+- Na página Todos.xaml, adicionar uma Grid com duas linhas; --------------------------------------------------------------- OK
+- Na primeira linha, adicionar um TextoBlock com o texto “Todos” e FontSize igual a 36 e margem igual a 12; --------------- OK
+- Na segunda linha, adicionar um controle ListView. 
+  Esse controle ListView deve ser semelhante ao ListView da página Favoritos; --------------------------------------------- OK
+
+  
+- Ao clicar na opção Emails do menu, navegar para a tela Emails, utilizando LINQ, 
+  realizar o filtro dos contatos com e-mails da lista de contatos e navegar para a tela Emails, 
+  passando o resultado do filtro como parâmetros;
+
+  
 Na página Emails.xaml, adicionar uma Grid com duas linhas;
 Na primeira linha, adicionar um TextoBlock com o texto “Emails” e FontSize igual a 36 e margem igual a 12;
 Na segunda linha, adicionar um controle ListView. Esse controle ListView deve ser semelhante ao ListView da página Favoritos;

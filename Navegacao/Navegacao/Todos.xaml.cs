@@ -40,6 +40,10 @@ namespace Navegacao
 
             if (todosOsContatos == null)
                 return;
+
+
+            myListView.ItemsSource = todosOsContatos;
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
